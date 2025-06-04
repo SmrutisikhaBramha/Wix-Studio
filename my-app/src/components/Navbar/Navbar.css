@@ -1,0 +1,126 @@
+/* Reset the background and text */
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Overall container */
+.navbar-container {
+  color: black;
+  background-color: white;
+  width: 100%;
+   position: sticky;
+}
+
+/* Top section with logo */
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+ 
+}
+
+/* Wix Studio logo and text */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-logo img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+/* Banner section with shipping text */
+.navbar-banner {
+  background-color: #222;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Main navbar links and icons */
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+/* Site brand (QUENX.) */
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* Search bar and icons */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: black;
+}
+
+.navbar-icons a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* Search bar styling */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: black;
+}
+
+/* Shopping cart badge */
+.navbar-cart {
+  position: relative;
+}
+
+.navbar-cart span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: white;
+  font-size: 10px;
+  padding: 1px 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
