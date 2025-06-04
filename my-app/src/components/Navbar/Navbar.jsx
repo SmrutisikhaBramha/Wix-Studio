@@ -27,6 +27,7 @@ const Navbar = () => {
                     <a href="/">Active QX</a>
                     <a href="/">Artisanal</a>
                     <a href="/">Kids</a>
+                    <a href="/">Products</a>
                     <a href="/">About Us</a>
                 </div>
                 <div className="navbar-icons">

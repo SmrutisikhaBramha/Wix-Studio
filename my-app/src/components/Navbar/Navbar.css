@@ -50,6 +50,8 @@ body {
   padding: 8px 0;
   font-weight: 500;
   letter-spacing: 0.5px;
+  animation: scroll-left 15s linear infinite;
+
 }
 
 /* Main navbar links and icons */
