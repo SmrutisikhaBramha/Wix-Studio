@@ -127,7 +127,7 @@
   background-color: #31356f;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;

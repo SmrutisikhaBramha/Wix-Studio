@@ -29,12 +29,12 @@ function App() {
               />
               <Productlist />
               <Contact />
-              <Footer />
             </>
           }
         />
         <Route path="/products" element={<Productlist />} />
       </Routes>
+      <Footer /> 
     </Router>
   );
 }

@@ -1,4 +1,4 @@
-/* Reset the background and text */
+
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Overall container */
+
 .navbar-container {
   color: black;
   background-color: white;
@@ -15,7 +15,7 @@ body {
    position: sticky;
 }
 
-/* Top section with logo */
+
 .navbar-top {
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@ body {
  
 }
 
-/* Wix Studio logo and text */
+
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ body {
   object-fit: contain;
 }
 
-/* Banner section with shipping text */
+
 .navbar-banner {
   background-color: #222;
   color: white;
@@ -54,7 +54,6 @@ body {
 
 }
 
-/* Main navbar links and icons */
 .navbar-main {
   display: flex;
   justify-content: space-between;
@@ -65,14 +64,14 @@ body {
   background-color: white;
 }
 
-/* Site brand (QUENX.) */
+
 .navbar-brand {
   font-size: 28px;
   font-weight: bold;
   color: black;
 }
 
-/* Navigation links */
+
 .navbar-links {
   display: flex;
   gap: 20px;
@@ -85,7 +84,7 @@ body {
   font-weight: 500;
 }
 
-/* Search bar and icons */
+
 .navbar-icons {
   display: flex;
   align-items: center;
@@ -100,7 +99,7 @@ body {
   font-weight: 500;
 }
 
-/* Search bar styling */
+
 .navbar-search {
   display: flex;
   align-items: center;
@@ -111,7 +110,7 @@ body {
   color: black;
 }
 
-/* Shopping cart badge */
+
 .navbar-cart {
   position: relative;
 }
