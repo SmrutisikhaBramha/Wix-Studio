@@ -1,13 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUENX - Vegan Sneakers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35</div>
+
+  <header>
+    <div class="logo">QUENX.</div>
+    <nav>
+      <a href="#">Shop All</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Active QX</a>
+      <a href="#">Artisanal</a>
+      <a href="#">Kids</a>
+      <a href="#">About Us</a>
+    </nav>
+    <div class="right-icons">
+      <input type="text" placeholder="Search" />
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1>WALKING WITH PURPOSE.</h1>
+        <p>Premium Vegan Sneakers</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="sale-badge">Sale</div>
+      <img src="shoe1.jpg" alt="Shoe" />
+      <div class="product-name">Bio Runner</div>
+      <div class="product-price">
+        <span class="old-price">$119.00</span>
+        <span class="new-price">$99.00</span>
+      </div>
+      <div class="cart-price">$99.00</div> <!-- Price ABOVE button -->
+      <button class="add-cart-btn" onclick="addToCart()">ADD TO CART</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>

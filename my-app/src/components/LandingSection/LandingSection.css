@@ -53,16 +53,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2rem;
   }
 
   .landing-heading,
   .landing-paragraph {
     max-width: 90%;
-   align-self: center;
+    align-self: center;
   }
 
-  .landing-paragraph p {
-    text-align: center;
+  .bg-shoe {
+    max-width: 80%;
+    margin-top: 2rem;
   }
 
   .landing-heading h1 {
@@ -71,5 +73,6 @@
 
   .landing-paragraph p {
     font-size: 1rem;
+    text-align: center;
   }
 }
