@@ -1,0 +1,27 @@
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #000000; 
+  color: rgb(255, 255, 255);
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 10s linear infinite;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-right: 1rem; 
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

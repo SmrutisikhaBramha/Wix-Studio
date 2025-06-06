@@ -6,14 +6,18 @@ import Productcard from './components/Productcard/Productcard';
 import Productlist from './components/Productlist/Productlist';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import BannerMarquee from './components/BannerMarquee/BannerMarquee';
+import CollectionSection from './components/CollectionSection/CollectionSection';
+import PromoBanner from './components/PromoBanner/PromoBanner';
+import LandingSection from './components/LandingSection/LandingSection';
 import './App.css';
+
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        {/* Home Page Route */}
         <Route
           path="/"
           element={
@@ -21,13 +25,13 @@ function App() {
               <Hero />
               <Productcard
                 product={{
-                  name: 'Active JR',
-                  image: '/assets/active-jr.jpg',
-                  oldPrice: 90,
-                  newPrice: 64,
                 }}
               />
               <Productlist />
+              <PromoBanner />
+               <BannerMarquee />
+              <CollectionSection />
+              <LandingSection />
               <Contact />
             </>
           }

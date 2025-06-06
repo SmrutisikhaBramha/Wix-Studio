@@ -5,7 +5,7 @@ import products from '../../data/products'; // adjust the path if different
 function ProductList() {
   return (
     <div className="product-section">
-      <h2 className="product-title">OUR BEST SELLERS</h2>
+      <h2 className="product-title">OUR BEST SELLERS</h2>      
       <div className="product-grid">
         {products.map(product => (
           <div key={product.id} className="product-card">
@@ -22,7 +22,7 @@ function ProductList() {
             </div>
           </div>
         ))}
-      </div>
+         </div>
       <div className="view-all-wrapper">
         <a href="/products" className="view-all-link">VIEW ALL →</a>
       </div>

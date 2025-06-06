@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className="navbar-top">
                 <div className="navbar-logo">
                     <img
-                        src="https://static.wixstatic.com/media/1f5c6e_4a490c4efcb6409eb28ff1efaf1748dd~mv2.png"
+                        src="https://wixmp-cca7fdc52d9b9ae8ca79a86d.wixmp.com/marketplace/partners/e199f9c4-fccd-4017-bc4a-1ee4471308b0/profile-image/1692852445044/wix-black.jpg"
                         alt="Wix Studio Logo"
                     />
                     <span>WIX STUDIO</span>
@@ -16,8 +16,12 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-banner">
-                ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶
-            </div>
+  <div className="scroll-text">
+    ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35  ✶  
+     FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35   ✶   
+     FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35   ✶   FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35   ✶   FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35   ✶   FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35   ✶   FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35   ✶ 
+  </div>
+</div>
 
             <div className="navbar-main">
                 <div className="navbar-brand">QUENX.</div>
@@ -39,8 +43,7 @@ const Navbar = () => {
                     <FaUserCircle />
                     <FaHeart />
                     <div className="navbar-cart">
-                        <FaShoppingBag />
-                        <span>0</span>
+                        <FaShoppingBag /> 
                     </div>
                 </div>
             </div>
