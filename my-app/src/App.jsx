@@ -4,12 +4,12 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Productcard from './components/Productcard/Productcard';
 import Productlist from './components/Productlist/Productlist';
-import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import BannerMarquee from './components/BannerMarquee/BannerMarquee';
 import CollectionSection from './components/CollectionSection/CollectionSection';
 import PromoBanner from './components/PromoBanner/PromoBanner';
 import LandingSection from './components/LandingSection/LandingSection';
+import TestimonialSection from './components/TestimonialSection/TestimonialSection';
 import './App.css';
 
 
@@ -32,7 +32,7 @@ function App() {
                <BannerMarquee />
               <CollectionSection />
               <LandingSection />
-              <Contact />
+            <TestimonialSection/>
             </>
           }
         />

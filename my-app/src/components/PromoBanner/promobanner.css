@@ -66,12 +66,14 @@
   min-width: 300px;
   justify-content: center;
   align-items: center;
-   padding: 1rem;
-   background-color: beige;
-   border-radius: 30px;
-   max-width: 50%;
+  padding: 1rem;
+  top: 10px;
+  background-color: beige;
+  border-radius: 30px;
+  max-width: 50%;
   min-width: 300px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .promo-right img {
@@ -91,8 +93,14 @@
   }
 
  .promo-right{
-    margin-top: 1rem;
     border-radius: 20px;
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin:1rem auto;
  }
 
   .promo-left h1 {
@@ -113,5 +121,8 @@
   .promo-right img{
     max-width: 100%;
     border-radius: 20px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }

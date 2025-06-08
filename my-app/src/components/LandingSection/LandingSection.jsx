@@ -1,4 +1,3 @@
-// src/components/LandingSection/LandingSection.jsx
 import React from 'react';
 import './LandingSection.css';
 import backgroundImage from '../../assets/images/background.jpg'; // make sure this path is correct

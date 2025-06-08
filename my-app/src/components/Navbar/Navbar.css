@@ -1,8 +1,10 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -13,12 +15,12 @@ body {
 
 
 .navbar-container {
-  color: black;
-  background-color: white;
   width: 100%;
   position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
 }
-
 
 .navbar-top {
   display: flex;
@@ -26,7 +28,6 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: white;
- 
 }
 
 .navbar-logo {
@@ -43,6 +44,7 @@ body {
   height: 25px;
   object-fit: contain;
 }
+
 .navbar-banner {
   background-color: #222;
   overflow: hidden;
@@ -77,10 +79,9 @@ body {
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #eee;
-  flex-wrap: wrap;
   background-color: white;
+  flex-wrap: wrap;
 }
-
 
 .navbar-brand {
   font-size: 28px;
@@ -116,7 +117,6 @@ body {
   font-weight: 500;
 }
 
-
 .navbar-search {
   display: flex;
   align-items: center;
@@ -143,3 +143,45 @@ body {
   border-radius: 50%;
 }
 
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-icons {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .navbar-search {
+    flex: 1;
+    margin-right: 10px;
+  }
+}
