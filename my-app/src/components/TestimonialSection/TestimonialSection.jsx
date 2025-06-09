@@ -5,21 +5,21 @@ const testimonials = [
   {
     quote: '"Eco-Friendly and Stylish"',
     description:
-      'Use this space to share a testimonial quote about the business, its products or its services. Include a quote from an actual customer to build trust and attract site visitors.',
+'Comfy Kicks! Stopped by this place on a whim and ended up buying two pairs! The staff was super friendly and helped me find the perfect size. Their sneaker collection is 🔥 — lots of trendy options and some hidden gems too. One star off just because the checkout line was a bit slow, but otherwise a great experience. Will definitely come back for more!',
     name: 'James Mitchell',
-    image: '/images/james.png', // put image inside public/images/
+    image: '/images/james.png', 
   },
   {
-    quote: '"Ideal for Active Lifestyles"',
+    quote: '"Shoes so good, my feet wrote this review!"',
     description:
-      'Use this space to share a testimonial quote about the business, its products or its services. Include a quote from an actual customer to build trust and attract site visitors.',
+      'I walked in barefoot, walked out feeling like a runway model. These shoes are so comfy, I forgot I was wearing them. I even did a little happy dance in the store — not ashamed. 10/10 would recommend if your feet deserve some love. Bonus points for the free socks promo!',
     name: 'Rebecca Thompson',
     image: '/images/rebecca.png',
   },
   {
-    quote: '"My New Daily Essential"',
+    quote: '"Excellent Product Range and Courteous Service"',
     description:
-      'Use this space to share a testimonial quote about the business, its products or its services. Include a quote from an actual customer to build trust and attract site visitors.',
+      'The store offers a wide variety of footwear options suitable for both casual and formal occasions. Staff members were attentive and provided useful suggestions based on my requirements. I appreciated the clean layout and organized display. Slight delay at billing, but overall a pleasant shopping experience.',
     name: 'Sophia Navarro',
     image: '/images/sophia.png',
   },
