@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
-import Productcard from './components/Productcard/Productcard';
 import Productlist from './components/Productlist/Productlist';
 import Footer from './components/Footer/Footer';
 import BannerMarquee from './components/BannerMarquee/BannerMarquee';
@@ -10,6 +9,8 @@ import CollectionSection from './components/CollectionSection/CollectionSection'
 import PromoBanner from './components/PromoBanner/PromoBanner';
 import LandingSection from './components/LandingSection/LandingSection';
 import TestimonialSection from './components/TestimonialSection/TestimonialSection';
+import AllProductsPage from './pages/allproductspages'; 
+import ProductDetail from './pages/ProductDetail';
 import './App.css';
 
 
@@ -23,10 +24,6 @@ function App() {
           element={
             <>
               <Hero />
-              <Productcard
-                product={{
-                }}
-              />
               <Productlist />
               <PromoBanner />
                <BannerMarquee />
@@ -37,6 +34,8 @@ function App() {
           }
         />
         <Route path="/products" element={<Productlist />} />
+        <Route path="/all-products" element={<AllProductsPage />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
       <Footer /> 
     </Router>

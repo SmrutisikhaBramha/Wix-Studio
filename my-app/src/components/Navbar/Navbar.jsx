@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { FaSearch, FaUserCircle, FaHeart, FaShoppingBag } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,12 +35,14 @@ const Navbar = () => {
                 <div className="navbar-brand">QUENX.</div>
 
                 <div className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
-                    <a href="/">Shop All</a>
-                    <a href="/">Best Sellers</a>
-                    <a href="/">Active QX</a>
-                    <a href="/">Artisanal</a>
-                    <a href="/">Kids</a>
-                    <a href="/">About Us</a>
+                    <Link to="/all-products">Shop All</Link>
+                    <Link to="/">Best Sellers</Link>
+                    <Link to="/">Active QX</Link>
+                    <Link to="/">Artisanal</Link>
+                    <Link to="/">Kids</Link>
+                    <Link to="/">About Us</Link>
+                    <Link to="/">Log In</Link>
+
                 </div>
 
                 <div className="navbar-icons">

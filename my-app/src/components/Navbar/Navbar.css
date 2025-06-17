@@ -13,7 +13,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
 .navbar-container {
   width: 100%;
   position: sticky;
@@ -94,6 +93,10 @@ body {
   display: flex;
   gap: 20px;
   font-size: 14px;
+  
+}
+.navbar-links:hover{
+  text-decoration: underline;
 }
 
 .navbar-links a {

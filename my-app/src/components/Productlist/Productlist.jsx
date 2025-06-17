@@ -15,7 +15,7 @@ function ProductList() {
             <span className="product-label">{product.label}</span>
             <img src={product.image} alt={product.title} className="product-image" />
             <div className="product-info">
-              <h3 className="product-name">{product.title}</h3>
+              <h6 className="product-name">{product.title}</h6>
               <p className="product-price">
                 {product.originalPrice && (
                   <span className="original-price">{product.originalPrice}</span>
