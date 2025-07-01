@@ -4,13 +4,13 @@ const products = [
     id: 1,
     name: 'Classic Sneakers',
     price: 74,
-    image: 'https://assets.adidas.com/images/w_1880,f_auto,q_auto/08484a52118d41d1a8e8ae9200f93620_9366/GW9215_01_standard.jpg',
+    image: 'https://redtape.com/cdn/shop/products/1-800x800_ab672078-1da2-4036-8537-e45750c71524.jpg?v=1708688215&width=1206',
   },
   {
     id: 2,
     name: 'Running Shoes',
     price: 84,
-    image: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/89afa6a48d7d4732b8daaead00ed1b45_9366/Start_Your_Run_Shoes_Black_GY9234_01_standard.jpg',
+    image: 'https://m.media-amazon.com/images/I/51yfqUBUzUL._SL1500_.jpg',
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const products = [
     id: 7,
     name: 'White Lace Shoes',
     price: 65,
-    image: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cc3416c01bff48249f77a7fd012dd9fd_9366/Samba_Classic_Shoes_White_772109_01_standard.jpg',
+    image: 'https://m.media-amazon.com/images/I/61D0REEttwL._UL1500_.jpg',
   },
   {
     id: 8,
@@ -71,6 +71,36 @@ const products = [
     name: 'Slip-on Style',
     price: 67,
     image: 'https://dsw.scene7.com/is/image/DSWShoes/297418_030_ss_01?$pdp-image$',
+  },
+   {
+    id: 101,
+    name: 'Kid Sprint',
+    price: '$79.00',
+    originalPrice: '$99.00',
+    label: 'Kids',
+    image: 'https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/16585158/2022/1/2/4f8c2ec8-fe53-4a20-b80f-25034a0b1e631641110358443RedTapeKidsBlackMeshWalkingShoes2.jpg',
+  },
+  {
+    id: 102,
+    name: 'Junior Bounce',
+    price: '$89.00',
+    label: 'Kids',
+    image: 'https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/15928988/2021/11/3/2b1fd8e3-a7af-4390-bd12-7aba419168011635936852194RedTapeUnisexKidsGreyMeshWalkingNon-MarkingShoes2.jpg',
+  },
+  {
+    id: 103,
+    name: 'Tiny Trek',
+    price: '$69.00',
+    label: 'Kids',
+    originalPrice: '$89.00',
+    image: 'https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/14595636/2021/6/28/95dfeb8a-eb9d-4c29-94ac-30fa482f08ae1624876496954RedTapeKidsWhiteColourblockedRTK0145WalkingShoes2.jpg',
+  },
+  {
+    id: 104,
+    name: 'Mini Dash',
+    price: '$74.00',
+    label: 'Kids',
+    image: 'https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/15929006/2021/11/3/3461b985-2418-40d2-98ed-87b29c8ce3791635936857953RedTapeUnisexKidsBlackMeshWalkingNon-MarkingShoes3.jpg',
   },
 ];
 

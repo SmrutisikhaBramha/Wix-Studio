@@ -13,7 +13,8 @@ const AllProductsPage = () => {
  
   const [priceRange, setPriceRange] = useState([64, 129]);
   const [sortOption, setSortOption] = useState('');
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [Count, setCount] = useState(8);
+  
 
  
   const filteredProducts = productsData.filter(
@@ -29,37 +30,39 @@ const AllProductsPage = () => {
     return 0;
   });
 
-  const visibleProducts = sortedProducts.slice(0, visibleCount);
-
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 4);
+  const visibleProducts = sortedProducts.slice(0, Count);
+  const loadMore = () => {
+    setCount((prev) => prev + 4);
   };
 
+return (
+  <div className="all-products-container">
+    <Breadcrumb current="All Products" />
 
-  return (
-    <div className="all-products-container">
-      <Breadcrumb current="All Products" />
+   
+    <h1 className="page-title">All Products</h1>
 
-      <div className="products-layout">
-        <div className="sidebar">              
-          <SidebarFilter priceRange={priceRange} setPriceRange={setPriceRange} />
+    <div className="products-layout">
+      <div className="sidebar">              
+        <SidebarFilter priceRange={priceRange} setPriceRange={setPriceRange} />
+      </div>
+
+      <div className="products-section">
+      
+        <div className="products-header">
+          <SortDropdown setSortOption={setSortOption} />
         </div>
 
-        <div className="products-section">
-          <div className="products-header">
-            <h1>All Products</h1>
-            <SortDropdown setSortOption={setSortOption} />
-          </div>
+        <ProductLists products={visibleProducts} />
 
-          <ProductLists products={visibleProducts} />
-
-          {visibleCount < sortedProducts.length && (
-            <LoadMoreButton onClick={handleLoadMore} />
-          )}
-        </div>
+        {Count < sortedProducts.length && (
+          <LoadMoreButton onClick={loadMore} />
+        )}
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default AllProductsPage;

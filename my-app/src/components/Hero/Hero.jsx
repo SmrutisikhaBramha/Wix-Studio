@@ -1,10 +1,16 @@
 import React from 'react';
 import './Hero.css';
+import { useNavigate } from 'react-router-dom';
 import heroShoe from '../../assets/images/hero-shoe.png';
 import cardShoe from '../../assets/images/card-shoe.png';
 
-
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    navigate('/cart');
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-left">
@@ -23,7 +29,9 @@ const Hero = () => {
           <div className="product-info">
             <h4>Bio Runner</h4>
             <p><span className="old-price">$119.00</span> <span className="new-price">$99.00</span></p>
-            <button className="add-to-cart">ADD TO CART</button>
+             <button className="add-to-cart" onClick={handleAddToCart}>
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>

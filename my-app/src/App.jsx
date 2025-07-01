@@ -11,6 +11,12 @@ import LandingSection from './components/LandingSection/LandingSection';
 import TestimonialSection from './components/TestimonialSection/TestimonialSection';
 import AllProductsPage from './pages/allproductspages'; 
 import ProductDetail from './pages/ProductDetail';
+import CartPage from './components/Cart/CartPage';
+import KidsShoesPage from './pages/KidsShoesPage';
+import BestSellersPage from './pages/BestSellersPage';
+import BestSellerProductDetail from './pages/BestSellerProductDetail';
+
+
 import './App.css';
 
 
@@ -26,7 +32,7 @@ function App() {
               <Hero />
               <Productlist />
               <PromoBanner />
-               <BannerMarquee />
+              <BannerMarquee />
               <CollectionSection />
               <LandingSection />
             <TestimonialSection/>
@@ -35,7 +41,13 @@ function App() {
         />
         <Route path="/products" element={<Productlist />} />
         <Route path="/all-products" element={<AllProductsPage />} />
+        <Route path="/best-sellers" element={<BestSellersPage />} />
+        <Route path="/best-sellers/product/:id" element={<BestSellerProductDetail />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/kids" element={<KidsShoesPage />} />
+        <Route path="/kids" element={<KidsShoesPage />} />
+        
       </Routes>
       <Footer /> 
     </Router>

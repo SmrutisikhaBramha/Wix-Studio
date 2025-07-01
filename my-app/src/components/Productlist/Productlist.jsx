@@ -1,31 +1,36 @@
 import React from 'react';
-import './productlist.css'; 
-import products from '../../data/products'; 
+import { Link } from 'react-router-dom';
+import './productlist.css';
+import products from '../../data/products';
 
 function ProductList() {
   return (
     <div className="product-section">
-      <h2 className="product-title">OUR BEST SELLERS</h2>  
-      <div className="view-all-wrapper">
-        <a href="/products" className="view-all-link">VIEW ALL →</a>
-      </div>    
-      <div className="product-grid">
-        {products.map(product => (
-          <div key={product.id} className="product-card">
-            <span className="product-label">{product.label}</span>
-            <img src={product.image} alt={product.title} className="product-image" />
-            <div className="product-info">
-              <h6 className="product-name">{product.title}</h6>
-              <p className="product-price">
-                {product.originalPrice && (
-                  <span className="original-price">{product.originalPrice}</span>
-                )}
-                {product.price}
-              </p>
-            </div>
-          </div>
-        ))}
-         </div>
+      <div className="section-header">
+        <h2 className="product-title">OUR BEST SELLERS</h2>
+        <Link to="/best-sellers" className="view-all-link">VIEW ALL →</Link>
+      </div>
+
+<div className="product-grid">
+  {products.map(product => (
+    <div key={product.id} className="product-card">
+      <Link to={`/best-sellers/product/${product.id}`}>
+        {product.label && <span className="product-label">{product.label}</span>}
+        <img src={product.image} alt={product.name} className="product-image" />
+      </Link>
+      <div className="product-info">
+        <p className="product-name">{product.name}</p>
+        <p className="product-price">
+          {product.originalPrice && (
+            <span className="original-price">{product.originalPrice}</span>
+          )}
+          {product.price}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }

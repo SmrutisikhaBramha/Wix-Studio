@@ -1,29 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SidebarFilter.css';
 
-const categories = ['All Products', 'Active QX', 'Artisanal', 'Best Sellers', 'Kids Shoes'];
+const categories = [
+  { name: 'All Products', path: '/all-products' },
+  { name: 'Active QX', path: '/' }, // placeholder
+  { name: 'Artisanal', path: '/' }, // placeholder
+  { name: 'Best Sellers', path: '/best-sellers' },
+  { name: 'Kids Shoes', path: '/kids' },
+];
 
 const SidebarFilter = ({ priceRange, setPriceRange }) => {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const navigate = useNavigate();
+
   const handlePriceChange = (e) => {
     const newValue = parseInt(e.target.value);
     setPriceRange([64, newValue]);
   };
 
-  return (
-    <div className="sidebar-filter">
-      <h3>Browse by</h3>
-      <ul className="category-list">
-        {categories.map((category, index) => (
-          <li key={index} className="category-item">
-            {category}
-          </li>
-        ))}
-      </ul>
+  const toggleMobileSidebar = () => {
+    setIsMobileOpen(!isMobileOpen);
+  };
 
-      <div className="price-filter">
-        <h4>Filter by Price</h4>
-        <div className="price-range">
-          <span>${priceRange[0]}</span>
+  const handleCategoryClick = (path) => {
+    navigate(path);
+    setIsMobileOpen(false); // close sidebar on mobile after click
+  };
+
+  return (
+    <>
+      <div className="filter-toggle" onClick={toggleMobileSidebar}>
+        Filter & Sort
+      </div>
+
+      <div className={`sidebar-filter ${isMobileOpen ? 'open' : ''}`}>
+        <h3 className="section-heading">Browse by</h3>
+        <hr />
+        <ul className="category-list">
+          {categories.map((category, index) => (
+            <li
+              key={index}
+              className="category-item"
+              onClick={() => handleCategoryClick(category.path)}
+            >
+              {category.name}
+            </li>
+          ))}
+        </ul>
+
+        <h4 className="section-heading">Filter by</h4>
+        <hr />
+        <div className="price-filter">
+          <div className="price-label">Price</div>
           <input
             type="range"
             min="64"
@@ -32,10 +61,15 @@ const SidebarFilter = ({ priceRange, setPriceRange }) => {
             onChange={handlePriceChange}
             className="price-slider"
           />
-          <span>${priceRange[1]}</span>
+          <div className="price-range">
+            <span>${priceRange[0]}</span>
+            <span>${priceRange[1]}</span>
+          </div>
         </div>
       </div>
-    </div>
+
+      {isMobileOpen && <div className="overlay" onClick={toggleMobileSidebar}></div>}
+    </>
   );
 };
 

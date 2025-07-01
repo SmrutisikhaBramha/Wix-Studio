@@ -1,53 +1,53 @@
+/* Promo Section Container */
 .promo-section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  padding: 40px 80px;
+  justify-content: space-between;
+  padding: 60px 80px;
   background-color: #ffffff;
-  box-sizing: border-box;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  
 }
 
+/* Left Text Section */
 .promo-left {
   flex: 1;
   padding: 1rem;
   text-align: left;
-  font-family: 'Arial', sans-serif;
-  padding-right: 40px;
-  min-width: 400px;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  max-width: 500px;
 }
 
+/* Headline */
 .promo-left h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #222;
-  line-height: 1.2;
-  margin-bottom: 10px;
-  max-width: 50%;
-  min-width: 400px;
-  box-sizing: border-box;
-  text-align: left;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
 }
 
+/* Subtext */
 .promo-left p {
   font-size: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   color: #555;
-  text-align: left;
 }
 
+/* Button */
 .promo-left button {
   padding: 0.8rem 1.6rem;
-  font-size: 1rem;
-  background-color: #000000;
+  font-size: 0.95rem;
+  background-color: #000;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -57,72 +57,64 @@
 }
 
 .promo-left button:hover {
-  background-color: #8991c5;
+  background-color: #555;
 }
 
+/* Right Shoe Image Container */
 .promo-right {
   flex: 1;
   display: flex;
-  min-width: 300px;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  top: 10px;
-  background-color: beige;
+  background-color: #f5f5dc; /* Light beige */
   border-radius: 30px;
   max-width: 50%;
   min-width: 300px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .promo-right img {
-  display: flex;
-  width: 100%; 
-  border-radius: 30px;
-  padding: 0;
-  object-fit: contain;
   max-width: 100%;
   height: auto;
+  border-radius: 30px;
+  object-fit: contain;
 }
 @media (max-width: 768px) {
   .promo-section {
     flex-direction: column;
-    height: auto;
-    padding: 2rem 1rem;
+    padding: 40px 20px;
   }
 
- .promo-right{
-    border-radius: 20px;
+  .promo-left {
     max-width: 100%;
-    min-width: 100%;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    margin:1rem auto;
- }
-
-  .promo-left h1 {
-    font-size: 2.2rem;
-    width: 100%;
-  }
-
-  .promo-left p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
     text-align: center;
   }
 
+  .promo-left h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .promo-left p {
+    font-size: 0.95rem;
+  }
+
   .promo-left button {
-    width: auto;
+    font-size: 0.95rem;
     margin-top: 1rem;
   }
-  .promo-right img{
+
+  .promo-right {
     max-width: 100%;
-    border-radius: 20px;
+    min-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .promo-right img {
+    width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    border-radius: 20px;
   }
 }

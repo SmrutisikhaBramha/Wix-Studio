@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   margin-bottom: 30px;
 }
 
@@ -32,7 +33,7 @@
 
 .collection-card {
   position: relative;
-  width: 330px;
+  width: 380px;
   border-radius: 16px;
   overflow: hidden;
   text-align: center;
@@ -64,6 +65,6 @@
 }
 
 .collection-card:hover h3 {
-  color: #6354b0; /* or any accent color */
+  color: #6354b0; 
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }

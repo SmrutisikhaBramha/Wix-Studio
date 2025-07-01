@@ -2,29 +2,32 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import products from '../data/productsData';
 import { MdOutlineWhatsapp, MdFacebook } from 'react-icons/md';
-import { FaPinterest } from 'react-icons/fa6';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaPinterest, FaXTwitter } from 'react-icons/fa6';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 import './ProductDetail.css';
 
 const ProductDetail = () => {
-  const { id } = useParams();//get the url
-  const productId = parseInt(id);//converting the string to int
-  const product = products.find((item) => item.id === productId);//finding the shoe that matches the id 
+  const { id } = useParams();
+  const productId = parseInt(id);
+  const product = products.find((item) => item.id === productId);
   const navigate = useNavigate();
-  
 
-  const goToNext = () => {
-    if (productId < products.length) {
-      navigate(`/product/${productId + 1}`);
+  // 🛠 Correct navigation using index
+  const currentIndex = products.findIndex((p) => p.id === productId);
+
+  const goToPrevious = () => {
+    if (currentIndex > 0) {
+      const prevProduct = products[currentIndex - 1];
+      navigate(`/product/${prevProduct.id}`);
     }
   };
 
-  const goToPrevious = () => {
-    if (productId > 1) {
-      navigate(`/product/${productId - 1}`);
+  const goToNext = () => {
+    if (currentIndex < products.length - 1) {
+      const nextProduct = products[currentIndex + 1];
+      navigate(`/product/${nextProduct.id}`);
     }
   };
 
@@ -34,26 +37,29 @@ const ProductDetail = () => {
     <div className="product-detail-container">
       <div className="top-navigation">
         <div className="breadcrumb">
-         <Link to="/">Home</Link> &gt;
-          <Link to="/all-products">All Products</Link> &gt; {product.name}
+          <Link to="/">Home</Link> &gt;
+          <Link to={product.label === 'Kids' ? "/kids" : "/all-products"}>
+            {product.label === 'Kids' ? 'Kids Shoes' : 'All Products'}
+          </Link> &gt; {product.name}
         </div>
+
         <div className="navigation-buttons">
-          <button onClick={goToPrevious} disabled={productId === 1}>
+          <button onClick={goToPrevious} disabled={currentIndex === 0}>
             &lt; Previous
           </button>
-          <button onClick={goToNext} disabled={productId === products.length}>
+          <button onClick={goToNext} disabled={currentIndex === products.length - 1}>
             Next &gt;
           </button>
         </div>
       </div>
-  
+
       <div className="product-detail-content">
         <div className="product-detail-image">
           <img src={product.image} alt={product.name} />
         </div>
 
         <div className="product-detail-info">
-          <h2 className="product-name">{product.name}</h2>
+          <h2 className="product-names">{product.name}</h2>
           <p className="product-price">${product.price}</p>
 
           <div className="quantity-section">

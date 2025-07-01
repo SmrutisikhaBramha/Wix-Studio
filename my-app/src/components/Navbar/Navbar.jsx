@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { FaSearch, FaUserCircle, FaHeart, FaShoppingBag } from "react-icons/fa";
+import { FaUserCircle, FaHeart, FaShoppingBag } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 
@@ -25,38 +26,42 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-banner">
-                <div className="scroll-text">
-                    ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶
-                    FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶
+                <div className="scroll-wrapper">
+                    <div className="scroll-text">
+                        ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶
+                    </div>
+                    <div className="scroll-text">
+                        ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶ FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 ✶
+                    </div>
                 </div>
             </div>
 
             <div className="navbar-main">
                 <div className="navbar-brand">QUENX.</div>
-
-                <div className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
-                    <Link to="/all-products">Shop All</Link>
-                    <Link to="/">Best Sellers</Link>
-                    <Link to="/">Active QX</Link>
-                    <Link to="/">Artisanal</Link>
-                    <Link to="/">Kids</Link>
-                    <Link to="/">About Us</Link>
-                    <Link to="/">Log In</Link>
-
+{isMobileMenuOpen && (
+  <div className="mobile-backdrop" onClick={toggleMobileMenu}></div>
+)}
+                <div className={`navbar-mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
+                    <Link to="/all-products" onClick={toggleMobileMenu}>Shop All</Link>
+                    <Link to="/best-sellers" onClick={toggleMobileMenu}>Best Sellers</Link>
+                    <Link to="/active-qx" onClick={toggleMobileMenu}>Active QX</Link>
+                    <Link to="/" onClick={toggleMobileMenu}>Artisanal</Link>
+                    <Link to="/kids" onClick={toggleMobileMenu}>Kids</Link>
+                    <Link to="/" onClick={toggleMobileMenu}>About Us</Link>
+                    <Link to="/" onClick={toggleMobileMenu}>Log In</Link>
                 </div>
+
 
                 <div className="navbar-icons">
                     <div className="navbar-search">
-                        <FaSearch />
+                        <CiSearch />
                         <span>Search</span>
                     </div>
-                    <a href="/">Log In</a>
                     <FaUserCircle />
                     <FaHeart />
                     <div className="navbar-cart">
                         <FaShoppingBag />
                     </div>
-
                     <div className="hamburger-icon" onClick={toggleMobileMenu}>
                         <RxHamburgerMenu size={24} color="#000" />
                     </div>
