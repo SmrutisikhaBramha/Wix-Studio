@@ -15,7 +15,11 @@ import CartPage from './components/Cart/CartPage';
 import KidsShoesPage from './pages/KidsShoesPage';
 import BestSellersPage from './pages/BestSellersPage';
 import BestSellerProductDetail from './pages/BestSellerProductDetail';
-
+import ActiveQXPage from './pages/ActiveQXPage';
+import ActiveQXProductDetail from './pages/ActiveQXProductDetail';
+import ArtisanalPage from './pages/ArtisanalPage';
+import ArtisanalProductDetail from './pages/ArtisanalProductDetail';
+import AboutSection from './pages/AboutSection';
 
 import './App.css';
 
@@ -47,7 +51,11 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/kids" element={<KidsShoesPage />} />
         <Route path="/kids" element={<KidsShoesPage />} />
-        
+        <Route path="/active-qx" element={<ActiveQXPage />} />
+        <Route path="/active-qx/product/:id" element={<ActiveQXProductDetail />} />
+        <Route path="/artisanal" element={<ArtisanalPage />} />
+        <Route path="/artisanal/product/:id" element={<ArtisanalProductDetail />} />
+        <Route path="/about" element={<AboutSection />} />
       </Routes>
       <Footer /> 
     </Router>

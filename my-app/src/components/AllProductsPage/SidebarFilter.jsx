@@ -4,8 +4,8 @@ import './SidebarFilter.css';
 
 const categories = [
   { name: 'All Products', path: '/all-products' },
-  { name: 'Active QX', path: '/' }, // placeholder
-  { name: 'Artisanal', path: '/' }, // placeholder
+  { name: 'Active QX', path: '/active-qx' }, 
+  { name: 'Artisanal', path: '/artisanal' }, 
   { name: 'Best Sellers', path: '/best-sellers' },
   { name: 'Kids Shoes', path: '/kids' },
 ];
@@ -25,7 +25,7 @@ const SidebarFilter = ({ priceRange, setPriceRange }) => {
 
   const handleCategoryClick = (path) => {
     navigate(path);
-    setIsMobileOpen(false); // close sidebar on mobile after click
+    setIsMobileOpen(false); 
   };
 
   return (
@@ -36,7 +36,7 @@ const SidebarFilter = ({ priceRange, setPriceRange }) => {
 
       <div className={`sidebar-filter ${isMobileOpen ? 'open' : ''}`}>
         <h3 className="section-heading">Browse by</h3>
-        <hr />
+        <hr/>
         <ul className="category-list">
           {categories.map((category, index) => (
             <li
@@ -67,8 +67,7 @@ const SidebarFilter = ({ priceRange, setPriceRange }) => {
           </div>
         </div>
       </div>
-
-      {isMobileOpen && <div className="overlay" onClick={toggleMobileSidebar}></div>}
+    {isMobileOpen && <div className="overlay" onClick={toggleMobileSidebar}></div>}
     </>
   );
 };
