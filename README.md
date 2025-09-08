@@ -1,1 +1,1 @@
-[shoe.store](wixstudio-shoe-store.netlify.app)
+[shoe-store](https://wixstudio-shoe-store.netlify.app)
