@@ -1,1 +1,1 @@
-wixstudio-shoe-store.netlify.app
+[shoe.store](wixstudio-shoe-store.netlify.app)
